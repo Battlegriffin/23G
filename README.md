@@ -8,9 +8,9 @@ success_url: req.protocol + '://' + req.get('http://localhost:3005') + '/checkou
         cancel_url: req.protocol + '://' + req.get('http://localhost:3005') + '/checkout/cancel'
       });
 
-MONGO URI is in app.js
-Sendgrid API key is in auth Controllers
-Stripe SK key is in shop Controllers
+MONGO URI is in app.js ,
+Sendgrid API key is in auth Controllers ,
+Stripe SK key is in shop Controllers ,
 Stripe PK key is in checkout.ejs in the 'shop' subfolder of views.
 
 Obviosuly mine will not work so the fields in that code is empty .
