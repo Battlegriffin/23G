@@ -4,36 +4,8 @@ when finished , the redirection back to the site when the Test Stripe Payment ha
 made is unsuccessful , there is something wrong I can't figure out what it is in 
 the following code found in shop.js in Controllers:
 
-return stripe.checkout.sessions.create({
-        payment_method_types: ['card'],
-        line_items: products.map(p => {
-          return {
-            name: p.productId.title,
-            description: p.productId.description,
-            amount: p.productId.price * 100,
-            currency: 'usd',
-            quantity: p.quantity
-          };
-        }),
-        success_url: req.protocol + '://' + req.get('http://localhost:3005') + '/checkout/success', // => http://localhost:3000
-        cancel_url: req.protocol + '://' + req.get('http://localhost:3005') + '/checkout/cancel'
-      });
-    })
-    .then(session => {
-      res.render('shop/checkout', {
-        path: '/checkout',
-        pageTitle: 'Checkout',
-        products: products,
-        totalSum: total,
-        sessionId: session.id
-      });
-    })
-    .catch(err => {
-      const error = new Error(err);
-      error.httpStatusCode = 500;
-      return next(error);
-    });
-};
+return stripe.checkout.sessions.create
+
 
 MONGO URI is in app.js ,
 Sendgrid API key is in auth Controllers ,
