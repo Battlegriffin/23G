@@ -13,4 +13,4 @@ Sendgrid API key is in auth Controllers ,
 Stripe SK key is in shop Controllers ,
 Stripe PK key is in checkout.ejs in the 'shop' subfolder of views.
 
-Obviosuly mine will not work so the fields in that code is empty .
+Obviosuly mine will not work so the fields there are empty .
